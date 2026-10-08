@@ -8,6 +8,9 @@ app.get('/ping', (req, res) => {
     return res.json({message: 'pong' });
 })
 
-app.listen(3000, () => {
-    console.log('Servidor rodando....na porta: http://localhost:3000');
+const PORT = process.env.PORT;
+
+app.listen(PORT, () => {
+//  console.log(`Servidor rodando....na porta: http://localhost:3000`);
+    console.log(`Servidor rodando....na porta: http://localhost:${PORT}`);
 })
